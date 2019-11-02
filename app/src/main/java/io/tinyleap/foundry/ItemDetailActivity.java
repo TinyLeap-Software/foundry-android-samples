@@ -2,6 +2,7 @@ package io.tinyleap.foundry;
 
 import android.content.Intent;
 import android.os.Bundle;
+import androidx.fragment.app.Fragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.widget.Toolbar;
@@ -10,7 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.ActionBar;
 import androidx.core.app.NavUtils;
 import android.view.MenuItem;
+import io.tinyleap.foundry.containers.ComponentContent;
+import io.tinyleap.foundry.containers.ComponentDetail;
 import io.tinyleap.foundry.ui.fragments.ItemDetailFragment;
+import io.tinyleap.foundry.util.UIUtils;
 
 /**
  * An activity representing a single Item detail screen. This
@@ -57,7 +61,8 @@ public class ItemDetailActivity extends AppCompatActivity {
             Bundle arguments = new Bundle();
             arguments.putString(ItemDetailFragment.ARG_ITEM_ID,
                     getIntent().getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
-            ItemDetailFragment fragment = new ItemDetailFragment();
+            ComponentDetail item = ComponentContent.ITEM_MAP.get(getIntent().getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
+            Fragment fragment = UIUtils.getFragment(item.getFragmentClass());
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.item_detail_container, fragment)

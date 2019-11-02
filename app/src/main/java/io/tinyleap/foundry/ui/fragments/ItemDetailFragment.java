@@ -1,6 +1,7 @@
 package io.tinyleap.foundry.ui.fragments;
 
 import android.app.Activity;
+import android.widget.LinearLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -20,7 +21,7 @@ import io.tinyleap.foundry.containers.ComponentDetail;
  * in two-pane mode (on tablets) or a {@link ItemDetailActivity}
  * on handsets.
  */
-public class ItemDetailFragment extends Fragment {
+public abstract class ItemDetailFragment extends Fragment {
     /**
      * The fragment argument representing the item ID that this fragment
      * represents.
@@ -51,8 +52,9 @@ public class ItemDetailFragment extends Fragment {
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout =  activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
-                appBarLayout.setTitle(mItem.getContentDescription());
+                appBarLayout.setTitle(mItem.getContentTitle());
             }
+
         }
     }
 
@@ -60,12 +62,16 @@ public class ItemDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.item_detail, container, false);
-
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
             ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.getContentDescription());
+            LinearLayout parent=rootView.findViewById(R.id.content);
+            addChildContent(mItem,inflater,parent);
         }
 
         return rootView;
     }
+
+    protected abstract void addChildContent(ComponentDetail detail,LayoutInflater inflater,ViewGroup parent);
+
 }
