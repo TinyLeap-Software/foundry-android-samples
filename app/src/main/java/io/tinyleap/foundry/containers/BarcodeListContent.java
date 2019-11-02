@@ -1,7 +1,6 @@
 package io.tinyleap.foundry.containers;
 
-import io.tinyleap.foundry.ui.fragments.BarcodeEncodingFragment;
-import io.tinyleap.foundry.ui.fragments.RandomDataFragment;
+import io.tinyleap.foundry.ui.fragments.barcode.BarcodeEncodingFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,7 +1,8 @@
 package io.tinyleap.foundry.containers;
 
-import io.tinyleap.foundry.ui.fragments.BarcodeEncodingListFragment;
+import io.tinyleap.foundry.ui.fragments.ComponentDetailListFragment;
 import io.tinyleap.foundry.ui.fragments.RandomDataFragment;
+import io.tinyleap.foundry.ui.fragments.barcode.BarcodeEncodeListFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,7 +30,7 @@ public class ComponentContent {
     static {
 
         addItem(new ComponentDetail("1","Random Data Generation","Generating Random data", RandomDataFragment.class));
-        addItem(new ComponentDetail("2","Barcode Generation","Generating Random data", BarcodeEncodingListFragment.class));
+        addItem(new ComponentDetail("2","Barcode Generation","Generating Random data", BarcodeEncodeListFragment.class));
         addItem(new ComponentDetail("3","Bitmap Filters","Generating Random data", RandomDataFragment.class));
         addItem(new ComponentDetail("4","Barcode Reading","Generating Random data", RandomDataFragment.class));
         addItem(new ComponentDetail("5","Random Data Generation","Generating Random data", RandomDataFragment.class));

@@ -12,8 +12,6 @@ import android.widget.TextView;
 import io.tinyleap.foundry.ItemDetailActivity;
 import io.tinyleap.foundry.ItemListActivity;
 import io.tinyleap.foundry.R;
-import io.tinyleap.foundry.containers.ComponentContent;
-import io.tinyleap.foundry.containers.ComponentDetail;
 
 /**
  * A fragment representing a single Item detail screen.
