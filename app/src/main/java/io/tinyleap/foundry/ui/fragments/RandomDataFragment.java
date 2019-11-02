@@ -7,15 +7,15 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 import io.tinyleap.foundry.R;
-import io.tinyleap.foundry.containers.ComponentDetail;
+
 import io.tinyleap.util.random.RandomColor;
 import io.tinyleap.util.random.RandomString;
 
-public class RandomDataFragment extends ItemDetailFragment {
+public class RandomDataFragment extends ComponentDetailFragment {
 
 
     @Override
-    protected void addChildContent(ComponentDetail detail, LayoutInflater inflater, ViewGroup parent) {
+    protected void addChildContent( LayoutInflater inflater, ViewGroup parent) {
         View rootView = inflater.inflate(R.layout.fragment_random_data, null, false);
         parent.addView(rootView);
         View random=rootView.findViewById(R.id.randomString);
@@ -34,5 +34,6 @@ public class RandomDataFragment extends ItemDetailFragment {
                 tvcolor.setBackgroundColor(RandomColor.getRandomColor());
             }
         });
+
     }
 }

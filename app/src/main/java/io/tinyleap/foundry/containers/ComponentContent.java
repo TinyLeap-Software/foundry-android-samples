@@ -1,6 +1,6 @@
 package io.tinyleap.foundry.containers;
 
-import io.tinyleap.foundry.ui.fragments.ItemDetailFragment;
+import io.tinyleap.foundry.ui.fragments.BarcodeEncodingListFragment;
 import io.tinyleap.foundry.ui.fragments.RandomDataFragment;
 
 import java.util.ArrayList;
@@ -26,13 +26,12 @@ public class ComponentContent {
      */
     public static final Map<String, ComponentDetail> ITEM_MAP = new HashMap<String, ComponentDetail>();
 
-    private static final int COUNT = 25;
-
     static {
+
         addItem(new ComponentDetail("1","Random Data Generation","Generating Random data", RandomDataFragment.class));
-        addItem(new ComponentDetail("2","Bitmap Filters","Generating Random data", RandomDataFragment.class));
-        addItem(new ComponentDetail("3","Barcode Reading","Generating Random data", RandomDataFragment.class));
-        addItem(new ComponentDetail("4","Barcode Generation","Generating Random data", RandomDataFragment.class));
+        addItem(new ComponentDetail("2","Barcode Generation","Generating Random data", BarcodeEncodingListFragment.class));
+        addItem(new ComponentDetail("3","Bitmap Filters","Generating Random data", RandomDataFragment.class));
+        addItem(new ComponentDetail("4","Barcode Reading","Generating Random data", RandomDataFragment.class));
         addItem(new ComponentDetail("5","Random Data Generation","Generating Random data", RandomDataFragment.class));
         addItem(new ComponentDetail("5","Random Data Generation","Generating Random data", RandomDataFragment.class));
         addItem(new ComponentDetail("5","Random Data Generation","Generating Random data", RandomDataFragment.class));

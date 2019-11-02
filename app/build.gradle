@@ -32,7 +32,8 @@ dependencies {
     //Foundry Dependencies
     implementation(group: 'io.tinyleap.android', name: 'util-random', version: "${foundry_version}", ext: 'aar')
     implementation(group: 'io.tinyleap.android', name: 'barcode-reader-zbar', version: "${foundry_version}", ext: 'aar')
-
+    implementation(group: 'io.tinyleap.android', name: 'util-random', version: "${foundry_version}", ext: 'aar')
+    implementation(group: 'io.tinyleap.android', name: 'lang', version: "${foundry_version}", ext: 'aar')
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'

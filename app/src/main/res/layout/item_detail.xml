@@ -15,7 +15,7 @@
               android:textSize="18sp"
               android:textColor="@color/colorPrimary"
               android:textIsSelectable="true"
-              tools:context=".ui.fragments.ItemDetailFragment"/>
+              tools:context=".ui.fragments.ComponentDetailFragment"/>
 
     <LinearLayout android:id="@+id/content"
                   android:layout_width="match_parent"

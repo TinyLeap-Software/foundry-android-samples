@@ -21,38 +21,39 @@ import io.tinyleap.foundry.containers.ComponentDetail;
  * in two-pane mode (on tablets) or a {@link ItemDetailActivity}
  * on handsets.
  */
-public abstract class ItemDetailFragment extends Fragment {
+public abstract class ComponentDetailFragment extends Fragment {
     /**
      * The fragment argument representing the item ID that this fragment
      * represents.
      */
-    public static final String ARG_ITEM_ID = "item_id";
-
-    /**
-     * The dummy content this fragment is presenting.
-     */
-    private ComponentDetail mItem;
+    public static final String ARG_TITLE = "title";
+    public static final String ARG_DESC = "description";
+    public static final String ARG_CLASS = "class";
+    private String title;
+    private String description;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public ItemDetailFragment() {
+    public ComponentDetailFragment() {
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments().containsKey(ARG_ITEM_ID)) {
+        if (getArguments()!=null && getArguments().containsKey(ARG_TITLE)) {
             // Load the dummy content specified by the fragment
             // arguments. In a real-world scenario, use a Loader
             // to load content from a content provider.
-            mItem = ComponentContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
-
+            title = getArguments().getString(ARG_TITLE);
+            if( getArguments().containsKey(ARG_DESC)){
+                description= getArguments().getString(ARG_DESC);
+            }
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout =  activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
-                appBarLayout.setTitle(mItem.getContentTitle());
+                appBarLayout.setTitle(title);
             }
 
         }
@@ -63,15 +64,15 @@ public abstract class ItemDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.item_detail, container, false);
         // Show the dummy content as text in a TextView.
-        if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.getContentDescription());
-            LinearLayout parent=rootView.findViewById(R.id.content);
-            addChildContent(mItem,inflater,parent);
+        if (description != null) {
+            ((TextView) rootView.findViewById(R.id.item_detail)).setText(description);
         }
+        LinearLayout parent=rootView.findViewById(R.id.content);
+        addChildContent(inflater,parent);
 
         return rootView;
     }
 
-    protected abstract void addChildContent(ComponentDetail detail,LayoutInflater inflater,ViewGroup parent);
+    protected abstract void addChildContent(LayoutInflater inflater,ViewGroup parent);
 
 }

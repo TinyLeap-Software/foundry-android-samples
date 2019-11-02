@@ -7,12 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import io.tinyleap.foundry.ItemDetailActivity;
 import io.tinyleap.foundry.containers.ComponentDetail;
-import io.tinyleap.foundry.ui.fragments.ItemDetailFragment;
-import io.tinyleap.foundry.ItemListActivity;
+import io.tinyleap.foundry.ui.fragments.ComponentDetailFragment;
 import io.tinyleap.foundry.R;
 import io.tinyleap.foundry.util.UIUtils;
 
@@ -20,7 +20,7 @@ import java.util.List;
 
 public class ComponentListAdapter extends RecyclerView.Adapter<ComponentListAdapter.ViewHolder> {
 
-    private final ItemListActivity mParentActivity;
+    private final AppCompatActivity mParentActivity;
     private final List<ComponentDetail> mValues;
     private final boolean mTwoPane;
     private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
@@ -29,7 +29,8 @@ public class ComponentListAdapter extends RecyclerView.Adapter<ComponentListAdap
             ComponentDetail item = (ComponentDetail) view.getTag();
             if (mTwoPane) {
                 Bundle arguments = new Bundle();
-                arguments.putString(ItemDetailFragment.ARG_ITEM_ID, item.getId());
+                arguments.putString(ComponentDetailFragment.ARG_TITLE, item.getContentTitle());
+                arguments.putString(ComponentDetailFragment.ARG_DESC, item.getContentDescription());
                 Fragment fragment = UIUtils.getFragment(item.getFragmentClass());
                 fragment.setArguments(arguments);
                 mParentActivity.getSupportFragmentManager().beginTransaction()
@@ -38,14 +39,15 @@ public class ComponentListAdapter extends RecyclerView.Adapter<ComponentListAdap
             } else {
                 Context context = view.getContext();
                 Intent intent = new Intent(context, ItemDetailActivity.class);
-                intent.putExtra(ItemDetailFragment.ARG_ITEM_ID, item.getId());
-
+                intent.putExtra(ComponentDetailFragment.ARG_TITLE, item.getContentTitle());
+                intent.putExtra(ComponentDetailFragment.ARG_DESC, item.getContentDescription());
+                intent.putExtra(ComponentDetailFragment.ARG_CLASS, item.getFragmentClass());
                 context.startActivity(intent);
             }
         }
     };
 
-    public ComponentListAdapter(ItemListActivity parent,
+    public ComponentListAdapter(AppCompatActivity parent,
                                   List<ComponentDetail> items,
                                   boolean twoPane) {
         mValues = items;
@@ -74,7 +76,7 @@ public class ComponentListAdapter extends RecyclerView.Adapter<ComponentListAdap
         return mValues.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView mIdView;
         final TextView mContentView;
 

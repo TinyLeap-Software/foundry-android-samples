@@ -13,7 +13,7 @@ import androidx.core.app.NavUtils;
 import android.view.MenuItem;
 import io.tinyleap.foundry.containers.ComponentContent;
 import io.tinyleap.foundry.containers.ComponentDetail;
-import io.tinyleap.foundry.ui.fragments.ItemDetailFragment;
+import io.tinyleap.foundry.ui.fragments.ComponentDetailFragment;
 import io.tinyleap.foundry.util.UIUtils;
 
 /**
@@ -59,10 +59,12 @@ public class ItemDetailActivity extends AppCompatActivity {
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
             Bundle arguments = new Bundle();
-            arguments.putString(ItemDetailFragment.ARG_ITEM_ID,
-                    getIntent().getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
-            ComponentDetail item = ComponentContent.ITEM_MAP.get(getIntent().getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
-            Fragment fragment = UIUtils.getFragment(item.getFragmentClass());
+            arguments.putString(ComponentDetailFragment.ARG_TITLE,
+                    getIntent().getStringExtra(ComponentDetailFragment.ARG_TITLE));
+            arguments.putString(ComponentDetailFragment.ARG_DESC,
+                    getIntent().getStringExtra(ComponentDetailFragment.ARG_DESC));
+
+            Fragment fragment = UIUtils.getFragment((Class<? extends Fragment>) getIntent().getSerializableExtra(ComponentDetailFragment.ARG_CLASS));
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.item_detail_container, fragment)
