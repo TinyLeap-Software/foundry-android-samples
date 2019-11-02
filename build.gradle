@@ -18,7 +18,6 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url 'http://mvnrepository.com/maven2' }
         maven {
             url "https://tinyleap.io/foundry/repository/libs-release"
         }
