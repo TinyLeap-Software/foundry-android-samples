@@ -12,17 +12,16 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 import io.tinyleap.foundry.ItemDetailActivity;
 import io.tinyleap.foundry.R;
-import io.tinyleap.foundry.containers.BarcodeListContent;
 import io.tinyleap.foundry.containers.ComponentDetail;
-import io.tinyleap.foundry.ui.adapters.ComponentDetailListAdapter;
 import io.tinyleap.foundry.util.UIUtils;
 
 public abstract class ComponentDetailListFragment extends ComponentDetailFragment {
-    boolean mTwoPane=true;
-    @Override
-    protected void addChildContent(LayoutInflater inflater, ViewGroup parent) {
-        View rootView = inflater.inflate(R.layout.fragment_list_barcode, null, false);
-        parent.addView(rootView);
+
+    protected int getChildLayout(){
+        return R.layout.fragment_list;
+    }
+
+    protected  void setupUI(View rootView){
         View detailContainer=getActivity().findViewById(R.id.item_detail_container);
         if ( detailContainer!= null && detailContainer instanceof NestedScrollView) {
             // The detail container view will be present only in the
@@ -33,8 +32,11 @@ public abstract class ComponentDetailListFragment extends ComponentDetailFragmen
         }
         RecyclerView recyclerView=rootView.findViewById(R.id.list);
         setAdapter(recyclerView);
-
     }
+
+
+    boolean mTwoPane=true;
+
     protected final View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {

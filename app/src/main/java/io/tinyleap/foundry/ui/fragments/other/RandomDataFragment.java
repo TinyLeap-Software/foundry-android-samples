@@ -1,4 +1,4 @@
-package io.tinyleap.foundry.ui.fragments;
+package io.tinyleap.foundry.ui.fragments.other;
 
 
 import android.view.LayoutInflater;
@@ -8,16 +8,19 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import io.tinyleap.foundry.R;
 
+import io.tinyleap.foundry.ui.fragments.ComponentDetailFragment;
 import io.tinyleap.util.random.RandomColor;
 import io.tinyleap.util.random.RandomString;
 
 public class RandomDataFragment extends ComponentDetailFragment {
 
+    @Override
+    protected int getChildLayout() {
+        return R.layout.fragment_random_data;
+    }
 
     @Override
-    protected void addChildContent( LayoutInflater inflater, ViewGroup parent) {
-        View rootView = inflater.inflate(R.layout.fragment_random_data, null, false);
-        parent.addView(rootView);
+    protected void setupUI(View rootView) {
         View random=rootView.findViewById(R.id.randomString);
         final TextView tv=rootView.findViewById(R.id.genString);
         random.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +37,5 @@ public class RandomDataFragment extends ComponentDetailFragment {
                 tvcolor.setBackgroundColor(RandomColor.getRandomColor());
             }
         });
-
     }
 }

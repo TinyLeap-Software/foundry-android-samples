@@ -66,11 +66,13 @@ public abstract class ComponentDetailFragment extends Fragment {
             ((TextView) rootView.findViewById(R.id.item_detail)).setText(description);
         }
         LinearLayout parent=rootView.findViewById(R.id.content);
-        addChildContent(inflater,parent);
-
+        View view = inflater.inflate(getChildLayout(), null, false);
+        parent.addView(view);
+        setupUI(view);
         return rootView;
     }
+    protected abstract int getChildLayout();
+    protected abstract void setupUI(View view);
 
-    protected abstract void addChildContent(LayoutInflater inflater,ViewGroup parent);
 
 }

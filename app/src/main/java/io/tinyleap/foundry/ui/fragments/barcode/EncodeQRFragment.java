@@ -7,10 +7,16 @@ import io.tinyleap.foundry.R;
 import io.tinyleap.foundry.containers.ComponentDetail;
 import io.tinyleap.foundry.ui.fragments.ComponentDetailFragment;
 
-public class BarcodeEncodingFragment extends ComponentDetailFragment {
+public class EncodeQRFragment extends ComponentDetailFragment {
+
+
     @Override
-    protected void addChildContent(LayoutInflater inflater, ViewGroup parent) {
-//        View rootView = inflater.inflate(R.layout.fragment_random_data, null, false);
-//        parent.addView(rootView);
+    protected int getChildLayout() {
+        return R.layout.fragment_encode_barcode;
+    }
+
+    @Override
+    protected void setupUI(View view) {
+
     }
 }
