@@ -15,6 +15,9 @@ public class BitmapFilterListFragment extends ComponentDetailListFragment {
         int i=0;
         addItem(new ComponentDetail(Integer.toString(i++),"Blur Filters","Blur Filter implementations", BlurFiltersListFragment.class));
         addItem(new ComponentDetail(Integer.toString(i++),"Color Filters","Color Filter implementations", ColorFiltersListFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Enhancement Filters","Enhancement Filter implementations", EnhanceFiltersListFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Edge Detection Filters","Edge Detection Filter implementations", EdgeDetectionFiltersListFragment.class));
+
     }
 
     private static void addItem(ComponentDetail item) {
