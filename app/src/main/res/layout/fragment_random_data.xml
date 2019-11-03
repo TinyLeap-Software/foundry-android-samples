@@ -8,8 +8,12 @@
         tools:context=".ui.fragments.other.RandomDataFragment">
 
     <Button android:id="@+id/randomString" android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="Random String" tools:context=".ui.fragments.other.RandomDataFragment"/>
+            android:text="Random Alphnumeric" tools:context=".ui.fragments.other.RandomDataFragment"/>
     <TextView android:id="@+id/genString" android:layout_width="match_parent" android:layout_height="wrap_content" android:minLines="3"/>
+
+    <Button android:id="@+id/randomString2" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Random Ascii" tools:context=".ui.fragments.other.RandomDataFragment"/>
+    <TextView android:id="@+id/genString2" android:layout_width="match_parent" android:layout_height="wrap_content" android:minLines="3"/>
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
         <Button android:id="@+id/randomColor" android:layout_width="wrap_content" android:layout_height="wrap_content"

@@ -1,10 +1,7 @@
 package io.tinyleap.foundry.ui.fragments.other;
 
 
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-
 import android.widget.TextView;
 import io.tinyleap.foundry.R;
 
@@ -29,6 +26,15 @@ public class RandomDataFragment extends ComponentDetailFragment {
                 tv.setText(RandomString.randomAlphanumeric(150));
             }
         });
+        random=rootView.findViewById(R.id.randomString2);
+        final TextView genString2=rootView.findViewById(R.id.genString2);
+        random.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                genString2.setText(RandomString.randomAscii(150));
+            }
+        });
+
         random=rootView.findViewById(R.id.randomColor);
         final View tvcolor=rootView.findViewById(R.id.genColor);
         random.setOnClickListener(new View.OnClickListener() {

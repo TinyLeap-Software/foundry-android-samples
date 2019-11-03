@@ -28,8 +28,8 @@ public class ComponentContent {
 
     static {
 
-        addItem(new ComponentDetail("1","Random Data Generation","Generating Random data", RandomDataFragment.class));
-        addItem(new ComponentDetail("2","Barcode Generation","Generating Random data", BarcodeEncodeListFragment.class));
+        addItem(new ComponentDetail("1","Generating Random Data","util-random : Generating Random data of different types", RandomDataFragment.class));
+        addItem(new ComponentDetail("2","Barcode Encoding","barcode-writer-zint: Customizable barcode encoding.", BarcodeEncodeListFragment.class));
         addItem(new ComponentDetail("3","Bitmap Filters","Generating Random data", RandomDataFragment.class));
         addItem(new ComponentDetail("4","Barcode Reading","Generating Random data", RandomDataFragment.class));
         addItem(new ComponentDetail("5","Random Data Generation","Generating Random data", RandomDataFragment.class));

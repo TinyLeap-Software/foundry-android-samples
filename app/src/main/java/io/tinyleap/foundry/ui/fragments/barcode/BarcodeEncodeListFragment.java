@@ -13,9 +13,15 @@ public class BarcodeEncodeListFragment extends ComponentDetailListFragment {
     static {
         int i=0;
         addItem(new ComponentDetail(Integer.toString(i++),"QRCode","QRCode encoding", EncodeQRFragment.class));
-        addItem(new ComponentDetail(Integer.toString(i++),"Aztec","Aztec encoding", EncodeQRFragment.class));
-        addItem(new ComponentDetail(Integer.toString(i++),"Codebar","Codebar encoding", EncodeQRFragment.class));
-        addItem(new ComponentDetail(Integer.toString(i++),"Code39","Code39 encoding", EncodeQRFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Aztec","Aztec encoding", AztecCodeFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Codebar","Codebar encoding", CodebarFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Code39","Code39 encoding", Code39Fragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Code128","Code128 encoding", Code128Fragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"PDF417","PDF417 encoding", PDF417CodeFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"EAN-8","EAN-8 encoding", EAN8CodeFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"EAN-13","EAN-13 encoding", EAN13Fragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"UPC-A","UPC-A encoding", UPCACodeFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Data-Matrix","Data-Matrix", DataMatrixFragment.class));
     }
 
     private static void addItem(ComponentDetail item) {
