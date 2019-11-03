@@ -22,10 +22,6 @@ public class ComponentContent {
      */
     public static final List<ComponentDetail> ITEMS = new ArrayList<ComponentDetail>();
 
-    /**
-     * A map of sample (dummy) items, by ID.
-     */
-    public static final Map<String, ComponentDetail> ITEM_MAP = new HashMap<String, ComponentDetail>();
 
     static {
 
@@ -47,7 +43,6 @@ public class ComponentContent {
 
     private static void addItem(ComponentDetail item) {
         ITEMS.add(item);
-        ITEM_MAP.put(item.getId(), item);
     }
 
 }

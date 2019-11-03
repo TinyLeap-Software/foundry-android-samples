@@ -4,7 +4,7 @@ import io.tinyleap.android.bitmap.TinyLeapBitmap;
 import io.tinyleap.bitmap.filters.ColorFilters;
 import io.tinyleap.foundry.ui.fragments.bitmap.BitmapFilterDetailFragment;
 
-public class InvertNativeColorFilterFragment extends BitmapFilterDetailFragment {
+public class SolarizeColorFilterFragment extends BitmapFilterDetailFragment {
 
     @Override
     protected boolean useSlider1() {
@@ -18,12 +18,12 @@ public class InvertNativeColorFilterFragment extends BitmapFilterDetailFragment 
 
     @Override
     protected int slider1Max() {
-        return 0;
+        return 100;
     }
 
     @Override
     protected String slider1Name() {
-        return "";
+        return "Saturation";
     }
 
 
@@ -39,6 +39,6 @@ public class InvertNativeColorFilterFragment extends BitmapFilterDetailFragment 
 
     @Override
     protected void processBitmap(TinyLeapBitmap bitmap) {
-        ColorFilters.invertNative(bitmap);
+        ColorFilters.solarize(bitmap);
     }
 }

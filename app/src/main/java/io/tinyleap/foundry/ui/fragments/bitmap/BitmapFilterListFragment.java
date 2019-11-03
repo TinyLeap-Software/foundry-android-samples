@@ -18,6 +18,8 @@ public class BitmapFilterListFragment extends ComponentDetailListFragment {
         addItem(new ComponentDetail(Integer.toString(i++),"Enhancement Filters","Enhancement Filter implementations", EnhanceFiltersListFragment.class));
         addItem(new ComponentDetail(Integer.toString(i++),"Edge Detection Filters","Edge Detection Filter implementations", EdgeDetectionFiltersListFragment.class));
 
+        addItem(new ComponentDetail(Integer.toString(i++),"Crypto Filters","Crypto Filter implementations", CryptoFiltersListFragment.class));
+
     }
 
     private static void addItem(ComponentDetail item) {

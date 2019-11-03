@@ -1,10 +1,10 @@
-package io.tinyleap.foundry.ui.fragments.bitmap.color;
+package io.tinyleap.foundry.ui.fragments.bitmap.edge;
 
 import io.tinyleap.android.bitmap.TinyLeapBitmap;
-import io.tinyleap.bitmap.filters.ColorFilters;
+import io.tinyleap.bitmap.filters.EdgeFilters;
 import io.tinyleap.foundry.ui.fragments.bitmap.BitmapFilterDetailFragment;
 
-public class InvertNativeColorFilterFragment extends BitmapFilterDetailFragment {
+public class CannyEdgeFilterFragment extends BitmapFilterDetailFragment {
 
     @Override
     protected boolean useSlider1() {
@@ -18,7 +18,7 @@ public class InvertNativeColorFilterFragment extends BitmapFilterDetailFragment 
 
     @Override
     protected int slider1Max() {
-        return 0;
+        return 100;
     }
 
     @Override
@@ -39,6 +39,6 @@ public class InvertNativeColorFilterFragment extends BitmapFilterDetailFragment 
 
     @Override
     protected void processBitmap(TinyLeapBitmap bitmap) {
-        ColorFilters.invertNative(bitmap);
+        EdgeFilters.cannyEdge(bitmap);
     }
 }

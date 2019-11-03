@@ -20,6 +20,12 @@ android {
         sourceCompatibility = '1.7'
         targetCompatibility = '1.7'
     }
+    packagingOptions {
+        pickFirst 'lib/x86_64/libBitmap.so'
+        pickFirst 'lib/x86_64/libBitmap_PNG.so'
+        pickFirst 'lib/arm64-v8a/libBitmap_PNG.so'
+        pickFirst 'lib/arm64-v8a/libBitmap.so'
+    }
 }
 
 dependencies {
@@ -44,6 +50,7 @@ dependencies {
     implementation(group: 'io.tinyleap.android', name: 'bitmap', version: "${foundry_version}", ext: 'aar')
     implementation(group: 'io.tinyleap.android', name: 'bitmap-common', version: "${foundry_version}", ext: 'aar')
     implementation(group: 'io.tinyleap.android', name: 'bitmap-filters', version: "${foundry_version}", ext: 'aar')
+    implementation(group: 'io.tinyleap.android', name: 'bitmap-utils', version: "${foundry_version}", ext: 'aar')
     implementation(group: 'io.tinyleap.android', name: 'graphics-color', version: "${foundry_version}", ext: 'aar')
 
     //Util
