@@ -1,5 +1,6 @@
 package io.tinyleap.foundry.containers;
 
+import io.tinyleap.foundry.ui.fragments.bitmap.BitmapFilterListFragment;
 import io.tinyleap.foundry.ui.fragments.other.RandomDataFragment;
 import io.tinyleap.foundry.ui.fragments.barcode.BarcodeEncodeListFragment;
 
@@ -30,8 +31,8 @@ public class ComponentContent {
 
         addItem(new ComponentDetail("1","Generating Random Data","util-random : Generating Random data of different types", RandomDataFragment.class));
         addItem(new ComponentDetail("2","Barcode Encoding","barcode-writer-zint: Customizable barcode encoding.", BarcodeEncodeListFragment.class));
-        addItem(new ComponentDetail("3","Bitmap Filters","Generating Random data", RandomDataFragment.class));
-        addItem(new ComponentDetail("4","Barcode Reading","Generating Random data", RandomDataFragment.class));
+        addItem(new ComponentDetail("4","Barcode Decoding","Generating Random data", RandomDataFragment.class));
+        addItem(new ComponentDetail("3","Bitmap Filters","Generating Random data", BitmapFilterListFragment.class));
         addItem(new ComponentDetail("5","Random Data Generation","Generating Random data", RandomDataFragment.class));
         addItem(new ComponentDetail("5","Random Data Generation","Generating Random data", RandomDataFragment.class));
         addItem(new ComponentDetail("5","Random Data Generation","Generating Random data", RandomDataFragment.class));
