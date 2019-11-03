@@ -4,7 +4,7 @@ import android.text.TextUtils;
 import android.widget.EditText;
 import io.tinyleap.barcode.BarcodeType;
 
-public class DatabarFragment extends EncodeQRFragment {
+public class AUSPostFragment extends EncodeQRFragment {
 
     protected void setText(EditText text){
         text.setText("FoundryforAndroid");
@@ -17,6 +17,6 @@ public class DatabarFragment extends EncodeQRFragment {
     }
 
     protected BarcodeType getBarcodeType(){
-        return BarcodeType.DATA_BAR;
+        return BarcodeType.AUSPOST;
     }
 }

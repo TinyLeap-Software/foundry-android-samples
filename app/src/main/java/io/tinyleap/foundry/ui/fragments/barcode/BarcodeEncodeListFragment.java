@@ -23,7 +23,7 @@ public class BarcodeEncodeListFragment extends ComponentDetailListFragment {
         addItem(new ComponentDetail(Integer.toString(i++),"UPC-A","UPC-A encoding", UPCACodeFragment.class));
         addItem(new ComponentDetail(Integer.toString(i++),"Data-Matrix","Data-Matrix", DataMatrixFragment.class));
         addItem(new ComponentDetail(Integer.toString(i++),"ITF","ITF barcode encoding ", ITFCodeFragment.class));
-        addItem(new ComponentDetail(Integer.toString(i++),"Databar","Databar barcode encoding ", DatabarFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"AusPost","AusPost barcode encoding ", AUSPostFragment.class));
     }
 
     private static void addItem(ComponentDetail item) {
