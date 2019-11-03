@@ -16,14 +16,13 @@ import io.tinyleap.foundry.util.UIUtils;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.io.IOException;
 
 public class EncodeQRFragment extends ComponentDetailFragment {
 
 
     @Override
     protected int getChildLayout() {
-        return R.layout.fragment_encode_barcode;
+        return R.layout.fragment_barcode_encode;
     }
 
     @Override
@@ -47,8 +46,10 @@ public class EncodeQRFragment extends ComponentDetailFragment {
                     try {
                         Bitmap bm = BarcodeWriter.encode(getActivity(), getBarcodeType(), text.getText().toString(), hints);
                         iv.setImageBitmap(bm);
-                    } catch (IOException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
+                        Snackbar.make(view, "Could not encode barcode for the given text.", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
                     }
                 }else{
                     Snackbar.make(view, "Text for "+getBarcodeType()+" barcode is not valid", Snackbar.LENGTH_LONG)

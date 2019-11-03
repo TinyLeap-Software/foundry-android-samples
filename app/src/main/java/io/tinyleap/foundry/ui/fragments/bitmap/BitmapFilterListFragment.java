@@ -13,8 +13,8 @@ public class BitmapFilterListFragment extends ComponentDetailListFragment {
     static final List<ComponentDetail> ITEMS = new ArrayList();
     static {
         int i=0;
-        addItem(new ComponentDetail(Integer.toString(i++),"Blur Filters","QRCode encoding", BlurFiltersListFragment.class));
-        addItem(new ComponentDetail(Integer.toString(i++),"Color Filters","Aztec encoding", AztecCodeFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Blur Filters","Blur Filter implementations", BlurFiltersListFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Color Filters","Color Filter implementations", ColorFiltersListFragment.class));
     }
 
     private static void addItem(ComponentDetail item) {

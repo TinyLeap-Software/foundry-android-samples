@@ -13,8 +13,10 @@ public class ColorFiltersListFragment extends ComponentDetailListFragment {
     static final List<ComponentDetail> ITEMS = new ArrayList();
     static {
         int i=0;
-        addItem(new ComponentDetail(Integer.toString(i++),"Box Blur","Blur Filter Implementations", ColorFiltersListFragment.class));
-        addItem(new ComponentDetail(Integer.toString(i++),"Color Filters","Aztec encoding", AztecCodeFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Grayscale","Blur Filter Implementations", ColorFiltersListFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Brightness","Color Filter Implementations", AztecCodeFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Contrast","Color Filter Implementations", AztecCodeFragment.class));
+
     }
 
     private static void addItem(ComponentDetail item) {

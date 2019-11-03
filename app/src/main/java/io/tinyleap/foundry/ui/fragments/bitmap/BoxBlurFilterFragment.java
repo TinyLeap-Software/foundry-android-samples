@@ -1,12 +1,13 @@
 package io.tinyleap.foundry.ui.fragments.bitmap;
 
 import android.view.View;
+import io.tinyleap.foundry.R;
 import io.tinyleap.foundry.ui.fragments.ComponentDetailFragment;
 
-public class BoxBlurFilter extends ComponentDetailFragment {
+public class BoxBlurFilterFragment extends ComponentDetailFragment {
     @Override
     protected int getChildLayout() {
-        return 0;
+        return R.layout.fragment_bitmap_filters;
     }
 
     @Override
