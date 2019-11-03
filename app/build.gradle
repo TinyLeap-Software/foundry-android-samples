@@ -30,14 +30,26 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0-beta01'
 
     //Foundry Dependencies
+    //Common
     implementation(group: 'io.tinyleap.android', name: 'common', version: "${foundry_version}", ext: 'aar')
+    implementation(group: 'io.tinyleap.android', name: 'graphics-color', version: "${foundry_version}", ext: 'aar')
+    implementation(group: 'io.tinyleap.android', name: 'math', version: "${foundry_version}", ext: 'aar')
+
+    //Barcode Operations
     implementation(group: 'io.tinyleap.android', name: 'barcode-common', version: "${foundry_version}", ext: 'aar')
     implementation(group: 'io.tinyleap.android', name: 'barcode-reader-zbar', version: "${foundry_version}", ext: 'aar')
     implementation(group: 'io.tinyleap.android', name: 'barcode-writer-zint', version: "${foundry_version}", ext: 'aar')
 
-    implementation(group: 'io.tinyleap.android', name: 'util-random', version: "${foundry_version}", ext: 'aar')
+    //Bitmap Operations
+    implementation(group: 'io.tinyleap.android', name: 'bitmap', version: "${foundry_version}", ext: 'aar')
+    implementation(group: 'io.tinyleap.android', name: 'bitmap-common', version: "${foundry_version}", ext: 'aar')
+    implementation(group: 'io.tinyleap.android', name: 'bitmap-filters', version: "${foundry_version}", ext: 'aar')
+    implementation(group: 'io.tinyleap.android', name: 'graphics-color', version: "${foundry_version}", ext: 'aar')
 
+    //Util
+    implementation(group: 'io.tinyleap.android', name: 'util-random', version: "${foundry_version}", ext: 'aar')
     implementation(group: 'io.tinyleap.android', name: 'lang', version: "${foundry_version}", ext: 'aar')
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test: :1.1.0-alpha4'

@@ -4,7 +4,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import io.tinyleap.foundry.containers.ComponentDetail;
 import io.tinyleap.foundry.ui.adapters.ComponentDetailListAdapter;
 import io.tinyleap.foundry.ui.fragments.ComponentDetailListFragment;
-import io.tinyleap.foundry.ui.fragments.barcode.*;
+import io.tinyleap.foundry.ui.fragments.bitmap.blur.BlurFiltersListFragment;
 
 import java.util.ArrayList;
 import java.util.List;
