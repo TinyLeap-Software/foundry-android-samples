@@ -20,6 +20,7 @@ public class RandomDataFragment extends ComponentDetailFragment {
     protected void setupUI(View rootView) {
         View random=rootView.findViewById(R.id.randomString);
         final TextView tv=rootView.findViewById(R.id.genString);
+        tv.setText(RandomString.randomAlphanumeric(150));
         random.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,7 +28,9 @@ public class RandomDataFragment extends ComponentDetailFragment {
             }
         });
         random=rootView.findViewById(R.id.randomString2);
+
         final TextView genString2=rootView.findViewById(R.id.genString2);
+        genString2.setText(RandomString.randomAscii(150));
         random.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

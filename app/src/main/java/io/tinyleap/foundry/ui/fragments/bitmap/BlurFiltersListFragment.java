@@ -12,7 +12,7 @@ public class BlurFiltersListFragment extends ComponentDetailListFragment {
     static final List<ComponentDetail> ITEMS = new ArrayList();
     static {
         int i=0;
-        addItem(new ComponentDetail(Integer.toString(i++),"Box Blur","Blur Filter Implementations", BoxBlurFilterFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Box Blur","Box Blur Filter Implementations", BoxBlurFilterFragment.class));
         addItem(new ComponentDetail(Integer.toString(i++),"Gaussian Blur Filter","Gaussian Filter Implementation", GaussianBlurFilter.class));
         addItem(new ComponentDetail(Integer.toString(i++),"Stack Blur Filter","Stack Filter Implementation", StackBlurFilter.class));
     }
