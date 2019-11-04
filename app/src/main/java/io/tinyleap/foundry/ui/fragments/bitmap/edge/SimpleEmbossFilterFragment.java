@@ -1,6 +1,6 @@
 package io.tinyleap.foundry.ui.fragments.bitmap.edge;
 
-import io.tinyleap.android.bitmap.TinyLeapBitmap;
+import io.tinyleap.bitmap.TinyLeapBitmap;
 import io.tinyleap.bitmap.filters.ColorFilters;
 import io.tinyleap.bitmap.filters.EdgeFilters;
 import io.tinyleap.foundry.ui.fragments.bitmap.BitmapFilterDetailFragment;
@@ -9,7 +9,7 @@ public class SimpleEmbossFilterFragment extends BitmapFilterDetailFragment {
 
     @Override
     protected boolean useSlider1() {
-        return true;
+        return false;
     }
 
     @Override

@@ -6,14 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
-import io.tinyleap.android.bitmap.AndroidBitmap;
-import io.tinyleap.android.bitmap.TinyLeapBitmap;
-import io.tinyleap.bitmap.filters.EdgeFilters;
+import io.tinyleap.bitmap.AndroidBitmap;
 import io.tinyleap.bitmap.filters.crypto.Steganography;
 import io.tinyleap.foundry.R;
 import io.tinyleap.foundry.ui.fragments.ComponentDetailFragment;
-import io.tinyleap.foundry.ui.fragments.bitmap.BitmapFilterDetailFragment;
 
 public class StegnographyEdgeFilterFragment extends ComponentDetailFragment {
 

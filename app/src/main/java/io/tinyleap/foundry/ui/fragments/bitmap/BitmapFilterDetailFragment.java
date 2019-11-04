@@ -7,8 +7,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import io.tinyleap.android.bitmap.AndroidBitmap;
-import io.tinyleap.android.bitmap.TinyLeapBitmap;
+import io.tinyleap.bitmap.AndroidBitmap;
+import io.tinyleap.bitmap.TinyLeapBitmap;
 import io.tinyleap.foundry.R;
 import io.tinyleap.foundry.ui.fragments.ComponentDetailFragment;
 

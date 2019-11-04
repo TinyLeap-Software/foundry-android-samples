@@ -7,6 +7,7 @@ import io.tinyleap.foundry.ui.fragments.ComponentDetailListFragment;
 import io.tinyleap.foundry.ui.fragments.bitmap.edge.CannyEdgeFilterFragment;
 import io.tinyleap.foundry.ui.fragments.bitmap.edge.LaPlaceEdgeFilterFragment;
 import io.tinyleap.foundry.ui.fragments.bitmap.edge.SimpleEmbossFilterFragment;
+import io.tinyleap.foundry.ui.fragments.bitmap.edge.SobelEdgeFilterFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ public class EdgeDetectionFiltersListFragment extends ComponentDetailListFragmen
         int i=0;
         addItem(new ComponentDetail(Integer.toString(i++),"Simple Emboss filter","Simple Emboss Filter Implementation", SimpleEmbossFilterFragment.class));
         addItem(new ComponentDetail(Integer.toString(i++),"Canny Edge filter","Canny Edge Detection Filter Implementation", CannyEdgeFilterFragment.class));
+        addItem(new ComponentDetail(Integer.toString(i++),"Sobel Edge filter","Sobel Edge Detection Filter Implementation", SobelEdgeFilterFragment.class));
         addItem(new ComponentDetail(Integer.toString(i++),"LaPlace Edge filter","LaPlace Edge Detection Filter Implementation", LaPlaceEdgeFilterFragment.class));
     }
 

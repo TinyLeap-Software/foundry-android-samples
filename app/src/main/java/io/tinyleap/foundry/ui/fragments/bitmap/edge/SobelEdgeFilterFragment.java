@@ -1,14 +1,15 @@
-package io.tinyleap.foundry.ui.fragments.bitmap.blur;
+package io.tinyleap.foundry.ui.fragments.bitmap.edge;
 
+import android.graphics.Bitmap;
 import io.tinyleap.bitmap.TinyLeapBitmap;
-import io.tinyleap.bitmap.filters.BlurFilters;
+import io.tinyleap.bitmap.filters.EdgeFilters;
 import io.tinyleap.foundry.ui.fragments.bitmap.BitmapFilterDetailFragment;
 
-public class SimpleBlurFilterFragment extends BitmapFilterDetailFragment {
+public class SobelEdgeFilterFragment extends BitmapFilterDetailFragment {
 
     @Override
     protected boolean useSlider1() {
-        return true;
+        return false;
     }
 
     @Override
@@ -23,7 +24,7 @@ public class SimpleBlurFilterFragment extends BitmapFilterDetailFragment {
 
     @Override
     protected String slider1Name() {
-        return "Radius";
+        return "";
     }
 
 
@@ -34,11 +35,11 @@ public class SimpleBlurFilterFragment extends BitmapFilterDetailFragment {
 
     @Override
     protected String slider2Name() {
-        return "";
+        return null;
     }
 
     @Override
     protected void processBitmap(TinyLeapBitmap bitmap) {
-        BlurFilters.fastSimpleBlur(bitmap,mSeekbar1.getProgress());
+        EdgeFilters.detectEdge(bitmap,EdgeFilters.VEdgeMatrix.SOBEL,EdgeFilters.HEdgeMatrix.SOBEL, Bitmap.Config.ARGB_8888);
     }
 }

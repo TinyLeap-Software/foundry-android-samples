@@ -1,6 +1,6 @@
 package io.tinyleap.foundry.ui.fragments.bitmap.blur;
 
-import io.tinyleap.android.bitmap.TinyLeapBitmap;
+import io.tinyleap.bitmap.TinyLeapBitmap;
 import io.tinyleap.bitmap.filters.BlurFilters;
 import io.tinyleap.foundry.ui.fragments.bitmap.BitmapFilterDetailFragment;
 ;
